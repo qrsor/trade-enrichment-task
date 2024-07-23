@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LineProcessorTest
 {
-	LineProcessor underTest = new LineProcessor();
+	LineProcessor underTest = new LineProcessor(new ProductIdToNameMapper());
 
 	@Test
 	void shouldSkipLineWithInvalidDate()
