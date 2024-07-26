@@ -21,7 +21,7 @@ def generateCSV(String fileName, int numRows) {
     println "CSV file '$fileName' with $numRows rows has been generated."
 }
 
-def generateDate(Random random) {
+static def generateDate(Random random) {
     if (random.nextInt(100) < 10) {  // 10% chance of empty or invalid date
         return random.nextBoolean() ? "" : "InvalidDate"
     }
@@ -40,7 +40,7 @@ if (args.length != 1) {
 try {
     int numRows = args[0].toInteger()
     generateCSV("generated_trade.csv", numRows)
-} catch (NumberFormatException e) {
+} catch (NumberFormatException ignored) {
     println "Error: Please provide a valid integer for the number of rows."
     System.exit(1)
 }
