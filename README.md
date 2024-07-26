@@ -8,3 +8,13 @@
 Run `mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xmx64m"` to start the server.
  
 The memory size is set to 64MB to simulate a low memory environment.
+
+## API documentation
+
+See after starting the server http://localhost:8080/swagger-ui/index.html
+
+## TODO
+- [ ] Structure LineProcessor with injectable validation and enrichment strategies.
+- [ ] Use lib to parse CSV files.
+- [ ] Add DB to be able to limit cache size if needed.
+- [ ] Improve generated API documentation.
