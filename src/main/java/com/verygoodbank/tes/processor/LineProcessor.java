@@ -6,16 +6,15 @@ import org.springframework.stereotype.Service;
 
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.time.temporal.TemporalAccessor;
 import java.util.Optional;
 
 
 @Service
 public class LineProcessor
 {
-	private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
-	private Logger logger = LoggerFactory.getLogger(LineProcessor.class);
-	private ProductIdToNameMapper mapper;
+	private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+	private final Logger logger = LoggerFactory.getLogger(LineProcessor.class);
+	private final ProductIdToNameMapper mapper;
 
 	public LineProcessor(ProductIdToNameMapper mapper)
 	{
