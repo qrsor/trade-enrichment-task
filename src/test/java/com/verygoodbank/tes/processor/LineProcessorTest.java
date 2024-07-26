@@ -33,14 +33,14 @@ class LineProcessorTest
 
 		//then
 		assertTrue(result.isPresent());
-		assertEquals("20160101,Product 1,EUR,10.0", result.get());
+		assertEquals("20160101,Treasury Bills Domestic,EUR,10.0", result.get());
 	}
 
 	@Test
 	void shouldMapProductIdToPlaceholderIfNameIsMissingMapping()
 	{
 		//given
-		String line = "20160101,2,EUR,10.0";
+		String line = "20160101,1337,EUR,10.0";
 
 		//when
 		var result = underTest.process(line);
